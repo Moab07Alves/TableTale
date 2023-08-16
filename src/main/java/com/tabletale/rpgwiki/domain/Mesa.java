@@ -75,5 +75,5 @@ public class Mesa extends AbstractEntity<Long>{
     public void setPersonagensDaMesa(List<Personagem> personagensDaMesa) {
         this.personagensDaMesa = personagensDaMesa;
     }
-    
+
 }
