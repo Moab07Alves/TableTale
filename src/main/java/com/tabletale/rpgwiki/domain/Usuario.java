@@ -29,6 +29,9 @@ public class Usuario extends AbstractEntity<Long>{
     @OneToMany(mappedBy = "usuario")
     private List<Personagem> pesronoagens;
 
+    @OneToMany(mappedBy = "usuarioMestre")
+    private List<Mesa> mesasMestradas;
+
     public String getNome() {
         return nome;
     }

@@ -63,6 +63,10 @@ public class Personagem extends AbstractEntity<Long>{
     @JoinColumn(name = "usuario_id_fk")
     private Usuario usuario;
 
+    @ManyToOne
+    @JoinColumn(name = "mesa_id_fk")
+    private Mesa mesa;
+
     public String getNome() {
         return nome;
     }
