@@ -1,9 +1,17 @@
 package com.tabletale.rpgwiki.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "PERSONAGENS")
 public class Personagem extends AbstractEntity<Long>{
@@ -66,149 +74,5 @@ public class Personagem extends AbstractEntity<Long>{
     @ManyToOne
     @JoinColumn(name = "mesa_id_fk")
     private Mesa mesa;
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getHistoria() {
-        return historia;
-    }
-
-    public void setHistoria(String historia) {
-        this.historia = historia;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public String getClasse() {
-        return classe;
-    }
-
-    public void setClasse(String classe) {
-        this.classe = classe;
-    }
-
-    public String getRaca() {
-        return raca;
-    }
-
-    public void setRaca(String raca) {
-        this.raca = raca;
-    }
-
-    public int getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
-    }
-
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setDataCriacao(LocalDate dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public int getDano() {
-        return dano;
-    }
-
-    public void setDano(int dano) {
-        this.dano = dano;
-    }
-
-    public int getForca() {
-        return forca;
-    }
-
-    public void setForca(int forca) {
-        this.forca = forca;
-    }
-
-    public int getDefesa() {
-        return defesa;
-    }
-
-    public void setDefesa(int defesa) {
-        this.defesa = defesa;
-    }
-
-    public int getAgilidade() {
-        return agilidade;
-    }
-
-    public void setAgilidade(int agilidade) {
-        this.agilidade = agilidade;
-    }
-
-    public int getInteligencia() {
-        return inteligencia;
-    }
-
-    public void setInteligencia(int inteligencia) {
-        this.inteligencia = inteligencia;
-    }
-
-    public int getSabedoria() {
-        return sabedoria;
-    }
-
-    public void setSabedoria(int sabedoria) {
-        this.sabedoria = sabedoria;
-    }
-
-    public int getCarisma() {
-        return carisma;
-    }
-
-    public void setCarisma(int carisma) {
-        this.carisma = carisma;
-    }
-
-    public int getAbates() {
-        return abates;
-    }
-
-    public void setAbates(int abates) {
-        this.abates = abates;
-    }
-
-    public int getAssistencia() {
-        return assistencia;
-    }
-
-    public void setAssistencia(int assistencia) {
-        this.assistencia = assistencia;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
 
 }
